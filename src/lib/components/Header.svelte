@@ -1,6 +1,5 @@
 <script>
     import { Hamburger, Cancel } from "$lib/scripts/logos.ts";
-    import { descriptionColor } from "$lib/scripts/stores/appearance.ts";
     import { clickOutside } from "$lib/scripts/functions/misc.ts";
     import { slide } from "svelte/transition";
 
@@ -16,9 +15,9 @@
 </script>
 
 <header class="fixed w-screen bg-[#0A0A0A] top-0 right-0 left-0 border-b-[1px] border-zinc-800 flex items-center justify-between box-sizing w-full text-sm z-20 px-10 py-[12px] z-30 md:px-4 ">
-    <div class="flex items-center justify-between max-w-[1279px] w-full mx-auto" >
+    <div class="flex items-center justify-between max-w-[1279px] w-full mx-auto text-zinc-300" >
         <a href="/" class="transition hover:scale-110">
-            <img src="/assets/logo.png" alt="logo" width="40px" height="40px" class="rounded-lg" />
+            Logo here
         </a>
     
         <div class="flex items-center gap-12 md:hidden text-xs">
@@ -35,7 +34,7 @@
 
 {#if dropdownOpen}
     <div 
-        class="fixed hidden md:flex flex-col justify-between h-full gap-2 h-screen w-full max-w-[300px] bg-[#0f0f0f] z-40 py-4 left-0 {$descriptionColor}" 
+        class="fixed hidden md:flex flex-col justify-between h-full gap-2 h-screen w-full max-w-[300px] bg-[#0f0f0f] z-40 py-4 left-0 text-zinc-300" 
         use:clickOutside
         on:outside={closeDropdown}
         transition:slide={{ axis: "x" }}
